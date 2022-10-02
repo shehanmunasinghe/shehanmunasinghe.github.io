@@ -1,0 +1,273 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+  <title>{{ site.name }}</title>
+
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+
+  <meta name="author" content="{{ site.name }}" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+</head>
+
+
+
+<body>
+
+  <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+    <tr style="padding:0px">
+      <td style="padding:0px">
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tr style="padding:0px">
+            <td style="padding:2.5%;width:60%;vertical-align:middle">
+              <!-- Name -->
+              <h1>
+                {{site.name}}
+              </h1>
+              <!-- Intro -->
+              <p>
+                I'm a research assistant at the Computer Vision Department of <a href="https://mbzuai.ac.ae/">MBZUAI, UAE</a>. 
+                I'm currently working on explainability of multimodal and vision transformers under the supervision of <a href="https://salman-h-khan.github.io/">Dr Salman Khan</a>.
+              </p>
+              <p>
+                I completed my undergrad at the <a href="https://ent.uom.lk/">Department of Electronic and Telecommunication Engineering, University of Moratuwa, Sri Lanka</a>. 
+                There I worked on dynamic object detection, tracking and trajectory prediction for autonomous driving, advised by <a href="https://peshala.staff.uom.lk/">Dr Peshala Jayasekara</a> and <a href="https://ranga.staff.uom.lk/">Dr Ranga Rodrigo</a>. 
+                I completed my internship working on an industrial machine vision project at <a href="https://www.creativesoftware.com/">Creative Software</a> in collaboration with <a href="https://www.cognite.com/en/">Cognite AS</a>. 
+              </p>
+              <p>
+                I'm interested in Computer Vision and Machine Learning with focus on the subdomains of multi-modal learning, self-supervised learning, and explainability. 
+              </p>
+              <!-- Links -->
+              <p style="text-align:center">
+                <a target="_blank" href="https://mailhide.io/e/{{site.footer-links.email_mailhide}}"> Email</a> &nbsp;/&nbsp;
+                <a href="{{site.footer-links.cv_url}}"> CV </a> &nbsp;/&nbsp;
+                <a href="https://www.linkedin.com/in/{{ site.footer-links.linkedin }}"> LinkedIn </a> &nbsp;/&nbsp;
+                <a href="https://scholar.google.com/citations?user={{ site.footer-links.gscholar }}">Google Scholar</a> &nbsp;/&nbsp;
+                <a href="https://twitter.com/{{ site.footer-links.twitter }}">Twitter</a> &nbsp;/&nbsp;
+                <a href="https://github.com/{{ site.footer-links.github }}">GitHub</a> 
+              </p>
+            </td>
+            <!-- Profile Photo -->
+            <td style="padding:2.5%;width:40%;max-width:40%">
+              <img style="width:100%;max-width:100%" alt="profile photo" src="{{site.avatar}}">
+            </td>
+          </tr>
+        </table>
+
+        <!-- Publications -->
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tr>
+            <td style="padding:2.5%;width:100%;vertical-align:middle">
+              <h2>Publications</h2>
+              <p>
+                <!-- I'm interested in computer vision, machine learning, optimization, graphics and robotics. -->
+              </p>
+            </td>
+          </tr>
+        </table>
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+
+          {% for post in site.posts %}
+          {% for cat in post.categories %}
+          {% if cat == 'publication' %}
+          <tr>
+            <td style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px">
+              <img src="/tn{{post.image}}" alt="project image" style="width:auto; height:auto; max-width:100%;" />
+            </td>
+            <td style="padding:2.5%;width:75%;vertical-align:middle">
+              <h3>{{post.title}}</h3>
+              <br>
+              {{post.authors}}
+
+              <br>
+              <em>{{post.venue}}</em>, {{ post.date | date: "%Y" }}
+              <br>
+              {% if post.paper %}
+              <a href="{{post.paper}}">Paper</a>
+              {% endif %}
+              {% if post.video %}
+              / <a href="{{post.video}}">video</a> /
+              {% endif %}
+              {% if post.code %}
+              <a href="{{post.code}}">code</a> /
+              {% endif %}
+              {% if post.poster %}
+              <a href="{{post.poster}}">poster</a> /
+              {% endif %}
+              {% if post.slides %}
+              <a href="{{post.slides}}">slides</a> /
+              {% endif %}
+              <p></p>
+              {{ post.excerpt }}
+            </td>
+          </tr>
+          {% endif %}
+          {% endfor %}
+          {% endfor %}
+        </table>
+        <br>
+        <br>
+        <br>
+        <!-- Other Projects -->
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tr>
+            <td style="padding:2.5%;width:100%;vertical-align:middle">
+              <h2>Other Projects</h2>
+              <!-- <p> These include coursework, side projects and unpublished research work.  -->
+              </p>
+            </td>
+          </tr>
+        </table>
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+
+          {% for post in site.posts %}
+          {% for cat in post.categories %}
+          {% if cat == 'projects' %}
+          <tr>
+            <td style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px">
+              <img src="/tn{{post.image}}" alt="project image" style="width:auto; height:auto; max-width:100%;" />
+            </td>
+            <td style="padding:2.5%;width:75%;vertical-align:middle">
+              <h3>{{post.title}}</h3>
+              <br>
+              <em>{{post.categories}} {{post.course}}</em>
+              <br>
+              {{ post.date | date: "%Y-%m-%d" }}
+
+              <br>
+              {% if post.website %}
+              <a href="{{post.website}}">website</a> /
+              {% endif %}
+              {% if post.paper %}
+              <a href="{{post.paper}}">paper</a> /
+              {% endif %}
+              {% if post.patent %}
+              <a href="{{post.patent}}">patent</a> /
+              {% endif %}
+              {% if post.patent2 %}
+              <a href="{{post.patent2}}">patent #2</a> /
+              {% endif %}
+              {% if post.patent3 %}
+              <a href="{{post.patent3}}">patent #3</a> /
+              {% endif %}
+              {% if post.video %}
+              <a href="{{post.video}}">video</a> /
+              {% endif %}
+              {% if post.video2 %}
+              <a href="{{post.video2}}">video #2</a> /
+              {% endif %}
+              {% if post.code %}
+              <a href="{{post.code}}">code</a> /
+              {% endif %}
+              {% if post.poster %}
+              <a href="{{post.poster}}">poster</a> /
+              {% endif %}
+              {% if post.slides %}
+              <a href="{{post.slides}}">slides</a> /
+              {% endif %}
+              <p></p>
+              {{ post.excerpt }}
+            </td>
+          </tr>
+          {% endif %}
+          {% endfor %}
+          {% endfor %}
+        </table>
+
+        <!-- Experience -->
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tr>
+            <td style="padding:2.5%;width:100%;vertical-align:middle">
+              <h2>Experience</h2>
+              <!-- <p> </p> -->
+            </td>
+          </tr>
+        </table>
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+
+          {% for post in site.posts %}
+          {% for cat in post.categories %}
+          {% if cat == 'experience' %}
+          <tr>
+            <td style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px">
+              <img src="/tn{{post.image}}" alt="project image" style="width:auto; height:auto; max-width:100%;" />
+            </td>
+            <td style="padding:2.5%;width:75%;vertical-align:middle">
+              <h3>{{post.title}}</h3>
+              <br>
+              <em>{{post.subtitle}}</em>
+              <br>
+              {{ post.date | date: "%B %Y" }} - 
+              {% if post.end_date %}
+              {{ post.end_date | date: "%B %Y" }}
+              {% endif %}
+              <br>
+              <p></p>
+              {{ post.excerpt }}
+            </td>
+          </tr>
+          {% endif %}
+          {% endfor %}
+          {% endfor %}
+        </table>
+
+        <!-- Education -->
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tr>
+            <td style="padding:2.5%;width:100%;vertical-align:middle">
+              <h2>Education</h2>
+              <!-- <p> </p> -->
+            </td>
+          </tr>
+        </table>
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+
+          {% for post in site.posts %}
+          {% for cat in post.categories %}
+          {% if cat == 'education' %}
+          <tr>
+            <td style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px">
+              <img src="/tn{{post.image}}" alt="project image" style="width:auto; height:auto; max-width:100%;" />
+            </td>
+            <td style="padding:2.5%;width:75%;vertical-align:middle">
+              <h3>{{post.title}}</h3>
+              <br>
+              <em>{{post.subtitle}}</em>
+              <br>
+              {{ post.date | date: "%B %Y" }} - 
+              {% if post.end_date %}
+              {{ post.end_date | date: "%B %Y" }}
+              {% endif %}
+              <br>
+              <p></p>
+              {{ post.excerpt }}
+            </td>
+          </tr>
+          {% endif %}
+          {% endfor %}
+          {% endfor %}
+        </table>
+
+        <!-- Footer -->
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tr>
+            <td style="padding:0px">
+              <br>
+              <p style="text-align:right;font-size:small;">
+                Design from <a style="font-size:small;" href="https://jonbarron.info">Jon Barron</a> and <a href="https://leonidk.com/">Leo Keselman</a>  
+              </p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+
+</html>
+
