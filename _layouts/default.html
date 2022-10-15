@@ -135,31 +135,21 @@
             <td style="padding:2.5%;width:75%;vertical-align:middle">
               <h3>{{post.title}}</h3>
               <br>
-              <em>{{post.categories}} {{post.course}}</em>
-              <br>
-              {{ post.date | date: "%Y-%m-%d" }}
+              {% if post.course %}
+              <em>{{post.course}}</em> <br>
+              {% endif %}
 
+              {{ post.date | date: "%B %Y" }} - 
+              {% if post.end_date %}
+              {{ post.end_date | date: "%B %Y" }}
+              {% else %} Present
+              {% endif %}
               <br>
-              {% if post.website %}
-              <a href="{{post.website}}">website</a> /
-              {% endif %}
               {% if post.paper %}
-              <a href="{{post.paper}}">paper</a> /
-              {% endif %}
-              {% if post.patent %}
-              <a href="{{post.patent}}">patent</a> /
-              {% endif %}
-              {% if post.patent2 %}
-              <a href="{{post.patent2}}">patent #2</a> /
-              {% endif %}
-              {% if post.patent3 %}
-              <a href="{{post.patent3}}">patent #3</a> /
+              <a href="{{post.paper}}">Paper</a>
               {% endif %}
               {% if post.video %}
-              <a href="{{post.video}}">video</a> /
-              {% endif %}
-              {% if post.video2 %}
-              <a href="{{post.video2}}">video #2</a> /
+              / <a href="{{post.video}}">video</a> /
               {% endif %}
               {% if post.code %}
               <a href="{{post.code}}">code</a> /
@@ -205,6 +195,7 @@
               {{ post.date | date: "%B %Y" }} - 
               {% if post.end_date %}
               {{ post.end_date | date: "%B %Y" }}
+              {% else %} Present
               {% endif %}
               <br>
               <p></p>
@@ -254,10 +245,14 @@
         </table>
 
         <!-- Footer -->
+        <br>
+        <br>
+        <br>
+        <br>
+        <hr>
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
           <tr>
             <td style="padding:0px">
-              <br>
               <p style="text-align:right;font-size:small;">
                 Design from <a style="font-size:small;" href="https://jonbarron.info">Jon Barron</a> and <a href="https://leonidk.com/">Leo Keselman</a>  
               </p>
