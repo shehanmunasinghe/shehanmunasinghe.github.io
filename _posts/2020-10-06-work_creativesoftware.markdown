@@ -10,4 +10,4 @@ image: /images/work_creativesoftware.png
 
 
 ---
-Worked on applying semantic segmentation and object detection neural networks for corrosion detection and industrial object detection. Also worked on synthetic data generation using Unity 3D game engine.
+Implemented solutions for semantic segmentation and object detection in corrosion and industrial object identification. Pioneered the creation of synthetic data through the Unity 3D game engine for enhanced model training.

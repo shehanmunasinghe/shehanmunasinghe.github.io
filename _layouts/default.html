@@ -31,16 +31,19 @@
               </h1>
               <!-- Intro -->
               <p>
-                I'm a research assistant at the Computer Vision Department of <a href="https://mbzuai.ac.ae/">MBZUAI, UAE</a>. 
-                I'm currently working on explainability of multimodal and vision transformers under the supervision of <a href="https://salman-h-khan.github.io/">Dr Salman Khan</a>.
+                I am a first-year Master’s student at <a href="https://mbzuai.ac.ae/">MBZUAI, UAE</a>, currently pursuing an MSc (research-based) in Computer Vision, under the supervision of <a href="https://salman-h-khan.github.io/">Dr Salman Khan</a> at the the <a href="https://www.ival-mbzuai.com/">Intelligent Visual Analytics Lab (IVAL)</a>.
+                <!-- I'm a research assistant at the Computer Vision Department of <a href="https://mbzuai.ac.ae/">MBZUAI, UAE</a>.  -->
+                <!-- My research interests include video understanding and large multimodal models, and currently I am working with <a href="https://salman-h-khan.github.io/">Dr Salman Khan</a>. -->
+                <!-- I'm currently working on explainability of multimodal and vision transformers under the supervision of <a href="https://salman-h-khan.github.io/">Dr Salman Khan</a>. -->
               </p>
               <p>
                 I completed my undergrad at the <a href="https://ent.uom.lk/">Department of Electronic and Telecommunication Engineering, University of Moratuwa, Sri Lanka</a>. 
                 There I worked on dynamic object detection, tracking and trajectory prediction for autonomous driving, advised by <a href="https://peshala.staff.uom.lk/">Dr Peshala Jayasekara</a> and <a href="https://ranga.staff.uom.lk/">Dr Ranga Rodrigo</a>. 
-                I completed my internship working on an industrial machine vision project at <a href="https://www.creativesoftware.com/">Creative Software</a> in collaboration with <a href="https://www.cognite.com/en/">Cognite AS</a>. 
+                <!-- I completed my internship working on an industrial machine vision project at <a href="https://www.creativesoftware.com/">Creative Software</a> in collaboration with <a href="https://www.cognite.com/en/">Cognite AS</a>.  -->
               </p>
               <p>
-                I'm interested in Computer Vision and Machine Learning with focus on the subdomains of multi-modal learning, self-supervised learning, and explainability. 
+                <!-- I'm interested in Computer Vision and Machine Learning with focus on the subdomains of multi-modal learning, self-supervised learning, and explainability.  -->
+                My research interests are <b>video understanding</b> and <b>large multimodal models</b>.
               </p>
               <!-- Links -->
               <p style="text-align:center">
@@ -91,16 +94,19 @@
               <a href="{{post.paper}}">Paper</a>
               {% endif %}
               {% if post.video %}
-              / <a href="{{post.video}}">video</a> /
+              / <a href="{{post.video}}">Video</a>
               {% endif %}
               {% if post.code %}
-              <a href="{{post.code}}">code</a> /
+              / <a href="{{post.code}}">Code</a>
               {% endif %}
               {% if post.poster %}
-              <a href="{{post.poster}}">poster</a> /
+              / <a href="{{post.poster}}">Poster</a>
               {% endif %}
               {% if post.slides %}
-              <a href="{{post.slides}}">slides</a> /
+              / <a href="{{post.slides}}">Slides</a>
+              {% endif %}
+              {% if post.webpage %}
+              / <a href="{{post.webpage}}">Project Page</a>
               {% endif %}
               <p></p>
               {{ post.excerpt }}
@@ -149,16 +155,19 @@
               <a href="{{post.paper}}">Paper</a>
               {% endif %}
               {% if post.video %}
-              / <a href="{{post.video}}">video</a> /
+              / <a href="{{post.video}}">Video</a>
               {% endif %}
               {% if post.code %}
-              <a href="{{post.code}}">code</a> /
+              / <a href="{{post.code}}">Code</a>
               {% endif %}
               {% if post.poster %}
-              <a href="{{post.poster}}">poster</a> /
+              / <a href="{{post.poster}}">Poster</a>
               {% endif %}
               {% if post.slides %}
-              <a href="{{post.slides}}">slides</a> /
+              / <a href="{{post.slides}}">Slides</a>
+              {% endif %}
+              {% if post.webpage %}
+              / <a href="{{post.webpage}}">Project Page</a>
               {% endif %}
               <p></p>
               {{ post.excerpt }}
@@ -233,6 +242,7 @@
               {{ post.date | date: "%B %Y" }} - 
               {% if post.end_date %}
               {{ post.end_date | date: "%B %Y" }}
+              {% else %} Present
               {% endif %}
               <br>
               <p></p>

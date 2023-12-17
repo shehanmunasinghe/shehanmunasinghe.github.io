@@ -6,7 +6,7 @@ image: /images/pub_fyp_trajpred.png
 categories: publication
 author: "Shehan Munasinghe"
 authors: "Bimsara Pathiraja, <strong>Shehan Munasinghe</strong>, Malshan Ranawella, Maleesha De Silva, Ranga Rodrigo, Peshala Jayasekara"
-venue: Arxiv-preprint
+venue: Arxiv
 paper: https://arxiv.org/abs/2209.00062
 slides: 
 code: 
