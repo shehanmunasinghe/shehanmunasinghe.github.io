@@ -1,5 +1,5 @@
 # Shehan Munasinghe's Personal Website
-## [shehanmunasinghe.github.io](shehanmunasinghe.github.io)
+## [shehanmunasinghe.github.io](https://shehanmunasinghe.github.io)
 
 This repo is built on a fork of **Jekyll Now** from [this repository](https://github.com/barryclark/jekyll-now). The website design is just a modification of [Jon Barron's website](https://jonbarron.info/) and is converted for my own use. **Feel free to use template for your own purposes**, but please respect copyright for all the images/content in my `images`, `pdfs`, `_posts` folders.
 
