@@ -31,10 +31,7 @@
               </h1>
               <!-- Intro -->
               <p>
-                I am a first-year Master’s student at <a href="https://mbzuai.ac.ae/">MBZUAI, UAE</a>, currently pursuing an MSc (research-based) in Computer Vision, under the supervision of <a href="https://salman-h-khan.github.io/">Dr Salman Khan</a> at the the <a href="https://www.ival-mbzuai.com/">Intelligent Visual Analytics Lab (IVAL)</a>.
-                <!-- I'm a research assistant at the Computer Vision Department of <a href="https://mbzuai.ac.ae/">MBZUAI, UAE</a>.  -->
-                <!-- My research interests include video understanding and large multimodal models, and currently I am working with <a href="https://salman-h-khan.github.io/">Dr Salman Khan</a>. -->
-                <!-- I'm currently working on explainability of multimodal and vision transformers under the supervision of <a href="https://salman-h-khan.github.io/">Dr Salman Khan</a>. -->
+                I am a second-year Master’s student at <a href="https://mbzuai.ac.ae/">MBZUAI, UAE</a>, currently pursuing the MSc in Computer Vision, advised by <a href="https://salman-h-khan.github.io/">Dr Salman Khan</a> and <a href="https://sites.google.com/view/fahadkhans/home">Professor Fahad Khan</a> at the the <a href="https://www.ival-mbzuai.com/">Intelligent Visual Analytics Lab (IVAL)</a>.
               </p>
               <p>
                 I completed my undergrad at the <a href="https://ent.uom.lk/">Department of Electronic and Telecommunication Engineering, University of Moratuwa, Sri Lanka</a>. 
@@ -43,7 +40,7 @@
               </p>
               <p>
                 <!-- I'm interested in Computer Vision and Machine Learning with focus on the subdomains of multi-modal learning, self-supervised learning, and explainability.  -->
-                My research interests are <b>video understanding</b> and <b>large multimodal models</b>.
+                My research interests include <b>vision-language modeling</b>, <b>video understanding</b> and <b>large multimodal models</b>.
               </p>
               <!-- Links -->
               <p style="text-align:center">
@@ -61,7 +58,8 @@
             </td>
           </tr>
         </table>
-
+        <hr>
+        
         <!-- Publications -->
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
           <tr>
@@ -119,6 +117,8 @@
         <br>
         <br>
         <br>
+        <hr>
+
         <!-- Other Projects -->
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
           <tr>
@@ -177,12 +177,13 @@
           {% endfor %}
           {% endfor %}
         </table>
+        <hr>
 
-        <!-- Experience -->
+        <!-- Education -->
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
           <tr>
             <td style="padding:2.5%;width:100%;vertical-align:middle">
-              <h2>Experience</h2>
+              <h2>Education</h2>
               <!-- <p> </p> -->
             </td>
           </tr>
@@ -191,10 +192,10 @@
 
           {% for post in site.posts %}
           {% for cat in post.categories %}
-          {% if cat == 'experience' %}
+          {% if cat == 'education' %}
           <tr>
             <td style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px">
-              <img src="/tn{{post.image}}" alt="project image" style="width:auto; height:auto; max-width:100%;" />
+              <img src="/tn{{post.image}}" alt="Education Instite Logo" style="width:auto; height:auto; max-width:80%;" />
             </td>
             <td style="padding:2.5%;width:75%;vertical-align:middle">
               <h3>{{post.title}}</h3>
@@ -215,12 +216,13 @@
           {% endfor %}
           {% endfor %}
         </table>
+        <hr>
 
-        <!-- Education -->
+        <!-- Experience -->
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
           <tr>
             <td style="padding:2.5%;width:100%;vertical-align:middle">
-              <h2>Education</h2>
+              <h2>Experience</h2>
               <!-- <p> </p> -->
             </td>
           </tr>
@@ -229,10 +231,10 @@
 
           {% for post in site.posts %}
           {% for cat in post.categories %}
-          {% if cat == 'education' %}
+          {% if cat == 'experience' %}
           <tr>
             <td style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px">
-              <img src="/tn{{post.image}}" alt="project image" style="width:auto; height:auto; max-width:100%;" />
+              <img src="/tn{{post.image}}" alt="Company Logo" style="width:auto; height:auto; max-width:80%;" />
             </td>
             <td style="padding:2.5%;width:75%;vertical-align:middle">
               <h3>{{post.title}}</h3>
